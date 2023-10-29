@@ -9,7 +9,7 @@ add_executable(SDKDllDirectRefSample ${GFN_SDK_SAMPLE_SOURCES})
 set_target_properties(SDKDllDirectRefSample PROPERTIES FOLDER "Samples")
 set_target_properties(SDKDllDirectRefSample PROPERTIES LINK_FLAGS "/ignore:4099")
 
-target_include_directories(SDKDllDirectRefSample PRIVATE ${GFN_SDK_DIST_DIR}/include)
+target_include_directories(SDKDllDirectRefSample PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # Set the configuration-specific binary output directory.
 set(TARGET_OUT_DIR "${CMAKE_CURRENT_BINARY_DIR}/$<CONFIGURATION>")

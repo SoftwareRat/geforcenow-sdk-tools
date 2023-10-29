@@ -1,0 +1,23 @@
+name: Build on Windows
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up MSVC environment
+        uses: ilammy/msvc-dev-cmd@v1.12.1
+        with:
+          arch: x64
+
+      - name: Build application
+        run: cl.exe /EHsc /Fe:gfn_sdk_tools.exe main.c

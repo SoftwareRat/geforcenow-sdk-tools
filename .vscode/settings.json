@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "gfnruntimesdk_capi.h": "c"
+        "gfnruntimesdk_capi.h": "c",
+        "gfnsdk_secureloadlibrary.h": "c"
     }
 }

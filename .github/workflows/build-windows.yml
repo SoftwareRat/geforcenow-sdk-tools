@@ -12,12 +12,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  # Checkout the code from the repository
 
       - name: Set up MSVC environment
-        uses: ilammy/msvc-dev-cmd@v1.12.1
+        uses: ilammy/msvc-dev-cmd@v1.12.1  # Set up the MSVC development environment
         with:
-          arch: x64
+          arch: x64  # Specify the architecture as x64
+
+      - name: Configure CMake
+        run: cmake -B build  # Configure CMake and generate build files in the 'build' directory
 
       - name: Build application
-        run: cl.exe /EHsc /Fe:gfn_sdk_tools.exe main.c
+        run: cmake --build build --config Release  # Build the application in Release mode

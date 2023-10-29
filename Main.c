@@ -2,7 +2,7 @@
 #include <tchar.h>
 #include <windows.h>            // For GetAsyncKeyState
 #include "SampleModule.h"
-#include "include/GfnSdk_SecureLoadLibrary.h"
+#include "GfnSdk_SecureLoadLibrary.h"
 
 bool g_MainDone = false;
 int g_pause_call_counter = 0;

@@ -27,7 +27,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "include/GfnRuntimeSdk_CAPI.h"
+#include "GfnRuntimeSdk_CAPI.h"
 
 extern bool g_MainDone;
 
